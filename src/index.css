@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=MedievalSharp&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+:root {
+    --color-forest-green: #1a3d2f;       
+    --color-bush-green: #2c5e3f;          
+    --color-sand-beige: #f5f1e5;         
+    --color-sunset-orange: #e67e22;       
+    --color-koala-grey: #313135;          
+    --color-link-hover: #64ffda;          
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+
+
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100%;
+}
+
+
+/* Dark mode styles */
+.dark {
+    background-color:var( --color-koala-grey);
+    color: var(--color-sand-beige);
+}
+
+
+/* Light mode styles */
+.light {
+    background-color: var(--color-sand-beige);
+    color: var( --color-koala-grey);
+}
+
+/* Toggle button styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    z-index: 999;
+    border-radius: 6px;
+    background-color: var( --color-koala-grey);
+    color: var(--color-sand-beige);
+    border: none;
+    cursor: pointer;
+} 
+.dark .dark-mode-toggle {
+    background-color: var(--color-sand-beige);
+    color: var( --color-koala-grey);
+} 

@@ -1,0 +1,37 @@
+.footer {
+    align-items: flex-start;
+    border-top: 2px solid var(--color-sand-beige);
+    background-color: var(--color-forest-green);
+    color: var(--color-sand-beige);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+     
+}
+
+.footer div {
+    flex: 1 1 150px;
+    margin-bottom: 1rem;
+}
+
+.hours {
+    text-align: left;
+}
+
+.hours p {
+    color: var(--color-sunset-orange) ;
+}
+
+
+.scheduleList {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding-left: 0;
+  
+}
+
+.scheduleList li {
+    margin-bottom: 0.3rem;
+}
+

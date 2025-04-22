@@ -1,0 +1,78 @@
+.shortAnimalContainer {
+    background-color: var(--color-bush-green);
+    border-radius: 10px;
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.animalImg {
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.description {
+    margin: 0 10% ;
+}
+.readMoreBtn {
+    background-color: var(--color-koala-grey);
+    border: 1px solid var(--color-sand-beige);
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    margin: 15px auto o;
+    padding: 8px 16px ;
+    text-align: center;
+}
+
+.animalName {
+    color: var(--color-sunset-orange);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+
+  }
+  
+.groupInfo {
+    color: var(--color-sand-beige);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+.readMoreBtn:hover {
+    color: var(--color-sunset-orange);
+}
+
+.description {
+    color: var(--color-sand-beige);
+}
+
+.groupLink {
+    color: var(--color-sand-beige);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.groupLink:hover {
+    text-decoration: underline;
+}
+
+.animalFacts {
+    color: var(--color-sand-beige);
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+
+@media screen and (min-width: 768px) {
+    .animalImg {
+        margin-top: 24px;
+        width: 60%;
+    }
+}
+

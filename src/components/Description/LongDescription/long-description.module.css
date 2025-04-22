@@ -1,0 +1,39 @@
+.LongDescriptionContainer {
+  align-items: center;
+  background-color: var(--color-forest-green);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(212, 228, 219, 0.1);
+  color: var(--color-sand-beige);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.animalImg {
+  border-radius: 0.75rem;
+  height: auto;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-size: 0.8rem;
+  color: var(--color-sand-beige);
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+
+@media (max-width: 480px) {
+  .LongDescriptionContainer {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}

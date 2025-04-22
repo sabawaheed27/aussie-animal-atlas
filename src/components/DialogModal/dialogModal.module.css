@@ -1,0 +1,28 @@
+.modal {
+  width: 90%;
+  max-width: 500px;
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  background-color: var(--color-sand-beige);
+  box-shadow: 0 4px 12px rgba(18, 168, 41, 0.2);
+}
+
+.modalCloseBtn{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-sand-beige);
+  border: 1px solid rgb(141, 11, 11);
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e01111;
+}
+
+.modalCloseBtn:hover {
+  color: var(--color-link-hover);
+} 
+
+
+ 
