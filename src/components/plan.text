@@ -1,0 +1,134 @@
+
+components/
+      ├─ Header.jsx         Contains logo and site name
+      ├─ MainContent.jsx    Displays main animal info 
+      ├─ Footer.jsx         Page footer
+
+  
+
+Layout/
+
+      ├─ DesktopView.jsx    Handles large screen layout
+      ├─ MobileView.jsx     Responsive navigation + toggling
+
+
+MainContent/
+
+      ├─is the main display area of the Australian Zoo site. It manages:
+      ├─Animal selection and display
+      ├─Conditional rendering of animal info
+      ├─Showing either a short or long description
+
+
+            Sidebar:
+                  Displays list of animals by category.
+                  Updates selected animal on click.
+            WelcomeMsg:
+                  Shown when no animal is selected
+                  Displays welcome based on current category.
+
+            ShortDescription:
+                  Rendered when an animal is selected.
+                  Includes a "Read More" action to show full detail.
+
+            LongDescription:
+                  Full detail of selected animal.
+
+            Toggle shown by isLongDescriptionOpen state
+                  Styling
+                  All styles imported via main-content.module.css.
+
+DesktopView/
+
+      ├─hamburger menu that toggles route links.
+      ├─desktop navigation bar for the Australian Zoo React SPA. It provides:
+      ├─Route-based navigation using icons.
+      ├─Highlights the active route.
+      ├─Clears the selected animal when navigating.
+
+            Props
+                  setShowAnimal: Clears selected animal when a navigation link is clicked.
+            handleClick()      
+                  Clears the current selected animal to reset the view when a new route is clicked.
+
+
+
+MobileView/
+
+      ├─the responsive mobile navigation component for the Australian Zoo React SPA. It provides:
+      ├─A hamburger menu that toggles route links.
+      ├─Icon-based navigation to different animal categories.
+      ├─Integration with React Router (NavLink + Outlet).
+
+                toggleMenu()
+                      Toggles menu open/close state.
+
+                handleClick()
+                      Closes menu and resets selected animal.
+
+                Styling 
+                      via mobileView.module.css.
+
+                Uses
+                      react-icons/fa:
+
+                FaBars: 
+                        Hamburger icon
+
+                FaTimes: 
+                        Close icon
+
+                Icons: 
+                        Home, Mammals, Birds, Reptiles
+
+
+
+LongDescription/ 
+      |__component displays detailed information about a selected animal inside a modal dialog. It is used when a user clicks “Read more” from the short summary.
+
+               DialogModal:
+                          Wraps all content inside a reusable modal component. Props:
+                          isOpen and onClose control modal state 
+                          CloseBtn renders the close button
+              
+              Uses getImageURL utility:
+                          to generate the correct path for imported images
+              
+              Detailed Layout:
+                          Animal name as <h2>
+                          Group and lifespan
+                          Habitat and food
+                          Length and weight
+                          Full description
+
+DialogModal/
+      |__is a reusable modal component built using the native <dialog> HTML element. It supports:
+      |__Toggle visibility via isOpen
+      |__Close button
+      |__Escape key closing
+      |__Ref-based control with animations/styling
+
+                          Props:
+                          isOpen	
+                                Controls the modal's visibility
+                          hasCloseBtn
+                          	    Whether to display the “×” close button
+                          onClose function 
+                                 when the modal is closed
+                          children	
+                                Content rendered inside the modal
+
+
+
+Main Component: App/
+
+      |__Uses React Router for routing between pages.
+      |__Maintains global states:
+      |__mobileMenu (for responsive mobile navigation)
+      |__showAnimal (for tracking selected animal)
+      |__category (animal category)
+      |__alreadyClicked (to avoid duplicate selection logic)
+      |__darkMode (save in local storage)
+      |__ Uses <Layout> component for shared structure (Header, Footer, MobileView, DesktopView) and all routes render through <Outlet /> inside Layout
+
+           
