@@ -1,23 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, Outlet } from "react-router-dom";
-
-import Header from './components/Header';
+import AppLayoutWrapper from "./Layout/AppLayoutWrapper";
 import MainContent from './components/MainContent';
-import Footer from './components/Footer';
-import DesktopView from './Layout/DesktopView';
-import MobileView from './Layout/MobileView';
 
-const Layout = ({ setShowAnimal, mobileMenu, setMobileMenu, darkMode }) => (
-  <>
-    <Header pageTitle="Australian Zoo" darkMode={darkMode} />
-    <DesktopView setShowAnimal={setShowAnimal}>
-      <MobileView mobileMenu={mobileMenu} setMobileMenu={setMobileMenu}>
-        <Outlet />
-      </MobileView>
-    </DesktopView>
-    <Footer />
-  </>
-);
+
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -50,7 +36,7 @@ function App() {
       <Routes>
         <Route
           element={
-            <Layout
+            <AppLayoutWrapper
               setShowAnimal={setShowAnimal}
               mobileMenu={mobileMenu}
               setMobileMenu={setMobileMenu}
