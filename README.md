@@ -17,23 +17,30 @@ This is a responsive, multi-page, built with **React** and **React Router**. The
 - 🔒 Reusable modal using native `<dialog>` with controlled visibility
 
 ---
-
-## 🧱 Project Structure
-
-```bash
+ 🧱 Project Structure
 src/
-├── App.tsx                         # Main entry point with global state and routes
-├── components/
-│   ├── Header.jsx                 # Site logo and name
-│   ├── Footer.jsx                 # Footer section
-│   ├── MainContent.jsx           # Central display logic for animals
-│   └── LongDescription/          # Modal popup with full animal info
-│       └── DialogModal.jsx       # Reusable dialog component
-├── Layout/
-│   ├── AppLayoutWrapper.jsx      # Common layout wrapper for routing
-│   ├── DesktopView.jsx           # Icon-based vertical nav for desktop
-│   └── MobileView.jsx            # Hamburger nav for mobile
-├── styles/
-│   ├── desktopView.module.css
-│   ├── mobileView.module.css
-│   └── main-content.module.css
+├── assets/                 # Images and other static assets
+├── components/             # Reusable components
+│   ├── Description/        # Short and long animal descriptions
+│   ├── DialogModal/        # Reusable modal component
+│   ├── Footer/             # Page footer
+│   ├── Header/             # Site logo and title
+│   ├── MainContent/        # Displays selected animal info
+│   ├── Sidebar/            # Animal list by category
+│   ├── SidebarButton/      # Sidebar toggler for mobile
+│   └── WelcomeMsg/         # Welcome message per category
+│
+├── data/                   # Static animal/category data
+│
+├── Layout/                 # Layout components
+│   ├── DesktopView/        # Desktop navbar + routing
+│   ├── MobileView/         # Responsive nav + toggler
+│   └── AppLayoutWrapper.jsx# Combines layout views with Header/Footer
+│
+├── utils/                  # Utility functions
+│   └── functions.js        # getImageURL and more
+│
+├── App.jsx                 # Main component with routes + global state
+├── main.jsx                # Entry point
+├── index.css               # Global styles
+└── index.html              # HTML template
