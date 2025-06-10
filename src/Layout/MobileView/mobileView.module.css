@@ -1,5 +1,6 @@
 .menu {
   height: 100%;
+
 }
 
 .navbar {
@@ -16,6 +17,7 @@
   top: 20px;
   right: 20px;
   z-index: 200;
+
 }
 
 /* Mobile menu */

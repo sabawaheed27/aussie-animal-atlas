@@ -8,6 +8,8 @@ import { FaHome, FaPaw, FaFeatherAlt, FaDragon } from 'react-icons/fa';
 const MobileView = ({ setShowAnimal }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
+
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
@@ -34,7 +36,7 @@ const MobileView = ({ setShowAnimal }) => {
         <nav className={styles.navbar} role="navigation">
           <div className={styles.icon} onClick={toggleMenu}>
 
-            //FaTimes A close (X) icon FaBars hamburger menu icon
+            {/* FaTimes A close (X) icon FaBars hamburger menu icon */}
             {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />} 
           </div>
 
